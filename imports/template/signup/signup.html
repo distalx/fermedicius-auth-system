@@ -1,0 +1,40 @@
+<template name="signup">
+  <div class="row topRow">
+    <div class="text-center">
+        <h4>Great ! Let's setup your account.</h4>
+    </div>
+  </div>
+  <div class="row mainRow">
+    <div class="col-md-4 col-md-offset-4 containerBox">
+
+      <div class="text-center">
+          <h5>Signup for free using</h5>
+          <br>
+          <button id="facebook-login" class="btn btn-primary socialLoginButton"> <i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button>
+          <button id="google-login" class="btn btn-danger socialLoginButton"> <i class="fa fa-google-plus" aria-hidden="true"></i> Google</button>
+          <br>
+          <br>
+          <h5>Or enter the information below</h5>
+      </div>
+
+      <br>
+      <form class="signUp">
+        <div class="form-group">
+          <label>Full name</label>
+          <input type="text" class="form-control" id="fullname">
+        </div>
+        <div class="form-group">
+          <label >Email address</label>
+          <input type="email" class="form-control" id="email" >
+        </div>
+        <div class="form-group">
+          <label >Password</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+
+        <button type="submit" class="btn btn-danger btn-block">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+</template>

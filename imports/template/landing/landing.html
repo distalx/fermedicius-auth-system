@@ -1,0 +1,7 @@
+<template name="landing">
+  {{#if currentUser}}
+    {{> welcome}}
+  {{else}}
+    {{> visitor}}
+  {{/if}}
+</template>

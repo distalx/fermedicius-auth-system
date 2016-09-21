@@ -1,0 +1,47 @@
+<template name="navbar">
+  <div class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Fermedicius</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {{#unless currentUser}}
+            {{> loginButtons}}
+          {{/unless}}
+
+          {{#if currentUser}}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img src="/default-avatar.png" class="img-circle" height="24" width="24"> {{currentUser.username}} <span class="caret"></span>
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="{{pathFor 'user profile' userId=currentUser._id}}">Profile</a></li>
+                <li role="separator" class="divider"></li>
+
+                {{#if isInRole 'admin, moderator'}}
+                  <li><a href="{{pathFor 'dashboard'}}">Dashboard <span class="badge"></span> </a></li>
+                  <li><a href="{{pathFor 'manage user'}}">Manage User <span class="badge"></span> </a></li>
+                {{/if}}
+
+                <li role="separator" class="divider"></li>
+                <li><a href="#" id="logout">Logout</a></li>
+              </ul>
+            </li>
+          {{/if}}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

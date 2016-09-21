@@ -1,0 +1,18 @@
+<template name="visitor">
+  {{#unless isSignup}}
+    {{> login}}
+  {{else}}
+    {{> signup}}
+  {{/unless}}
+
+  <div class="row">
+    <div class="text-center">
+      {{#unless isSignup}}
+        <h5 id="signup">Don't have an account? Get Started</h5>
+      {{else}}
+        <h5 id="login">Already Have an account? Login.</h5>
+      {{/unless}}
+
+    </div>
+  </div>
+</template>

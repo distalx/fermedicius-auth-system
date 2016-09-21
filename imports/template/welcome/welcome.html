@@ -1,0 +1,16 @@
+<template name="welcome">
+  <div class="row topRow">
+    <div class="text-center">
+        <h4>Welcome to Fermedicius !!!</h4>
+    </div>
+  </div>
+  <div class="row mainRow">
+    <div class="col-md-4 col-md-offset-4 containerBox">
+      <div class="text-center">
+        <h4>Logged in as</h4>
+        <h5>{{#if currentUser.profile.fullname }}{{currentUser.profile.fullname}} {{else}} {{currentUser.email}} {{/if}}</h5>
+      </div>
+      <button class="btn btn-primary btn-block" id="logout">Logout</button>
+    </div>
+  </div>
+</template>

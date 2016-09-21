@@ -1,0 +1,29 @@
+*{
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+.topRow{
+  padding-top: 60px;
+  color: #fff;
+  height: 180px;
+  background: #2c407c;
+}
+
+.mainRow{
+
+}
+
+.containerBox{
+  position: relative; top: -35px;
+  padding: 20px;
+  background-color: #fff;
+  -moz-box-shadow:    1px 1px 5px 6px #ccc;
+  -webkit-box-shadow: 1px 1px 5px 6px #ccc;
+  box-shadow:         1px 1px 5px 6px #ccc;
+}
+
+.socialLoginButton{
+  min-width: 100px;
+  width: 170px;
+}
